@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.InventarioControlador">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controlador.InventarioControlador">
     <children>
-        <TextField fx:id="txtCantidad" promptText="Cantidad"/>
-        <TextField fx:id="txtPrecio" promptText="Precio"/>
-        <TextField fx:id="txtNombre" promptText="Nombre del Producto"/>
-        <Button text="Agregar Producto" onAction="#agregarProducto"/>
+        <Button onAction="#manejarAgregarProducto" text="Mostrar Campos para Agregar Producto" fx:id="btnAgregarProducto" />
+        <VBox fx:id="vboxCampos">
+            <children>
+                <TextField fx:id="txtCantidad" promptText="Cantidad" />
+                <TextField fx:id="txtPrecio" promptText="Precio" />
+                <TextField fx:id="txtNombre" promptText="Nombre del Producto" />
+            </children>
+        </VBox>
         <TableView fx:id="tablaProductos">
             <columns>
-                <TableColumn fx:id="colNombre" text="Nombre"/>
-                <TableColumn fx:id="colCantidad" text="Cantidad"/>
-                <TableColumn fx:id="colPrecio" text="Precio"/>
+                <TableColumn fx:id="colNombre" text="Nombre" />
+                <TableColumn fx:id="colCantidad" text="Cantidad" />
+                <TableColumn fx:id="colPrecio" text="Precio" />
             </columns>
         </TableView>
-        <ListView fx:id="listViewProductos"/>
+        <ListView fx:id="listViewProductos" />
     </children>
 </VBox>
-
-
