@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch MainApp",
+            "request": "launch",
+            "mainClass": "modelo.MainApp",
+            "vmArgs": "--module-path C:\\Users\\Usuario\\Desktop\\sdkJavaFx\\javafx-sdk-22.0.1\\lib --add-modules javafx.controls,javafx.fxml",
+            "projectName": "GV01_1b0d8c7c"
+        }
+    ]
+}
+

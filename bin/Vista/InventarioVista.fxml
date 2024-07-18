@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.InventarioControlador">
+    <children>
+        <TextField fx:id="txtCantidad" promptText="Cantidad"/>
+        <TextField fx:id="txtPrecio" promptText="Precio"/>
+        <TextField fx:id="txtNombre" promptText="Nombre del Producto"/>
+        <Button text="Agregar Producto" onAction="#agregarProducto"/>
+        <TableView fx:id="tablaProductos">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre"/>
+                <TableColumn fx:id="colCantidad" text="Cantidad"/>
+                <TableColumn fx:id="colPrecio" text="Precio"/>
+            </columns>
+        </TableView>
+        <ListView fx:id="listViewProductos"/>
+    </children>
+</VBox>
+
+
