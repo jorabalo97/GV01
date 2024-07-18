@@ -9,8 +9,8 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controlador.InventarioControlador">
     <children>
-        <Button onAction="#manejarAgregarProducto" text="Mostrar Campos para Agregar Producto" fx:id="btnAgregarProducto" />
-        <VBox fx:id="vboxCampos">
+        <Button onAction="#manejarAgregarProducto" text=" Agregar Producto" fx:id="btnAgregarProducto" />
+        <VBox fx:id="vboxCampos" managed="false" visible="false">
             <children>
                 <TextField fx:id="txtCantidad" promptText="Cantidad" />
                 <TextField fx:id="txtPrecio" promptText="Precio" />
