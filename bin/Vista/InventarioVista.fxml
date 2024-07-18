@@ -4,26 +4,55 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controlador.InventarioControlador">
-    <children>
-        <Button onAction="#manejarAgregarProducto" text=" Agregar Producto" fx:id="btnAgregarProducto" />
-        <VBox fx:id="vboxCampos" managed="false" visible="false">
-            <children>
-                <TextField fx:id="txtCantidad" promptText="Cantidad" />
-                <TextField fx:id="txtPrecio" promptText="Precio" />
-                <TextField fx:id="txtNombre" promptText="Nombre del Producto" />
-            </children>
-        </VBox>
-        <TableView fx:id="tablaProductos">
-            <columns>
-                <TableColumn fx:id="colNombre" text="Nombre" />
-                <TableColumn fx:id="colCantidad" text="Cantidad" />
-                <TableColumn fx:id="colPrecio" text="Precio" />
-            </columns>
-        </TableView>
-        <ListView fx:id="listViewProductos" />
-    </children>
-</VBox>
+<TabPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controlador.InventarioControlador">
+    <tabs>
+        <!-- Pestaña de Productos -->
+        <Tab text="Agregar Producto">
+            <VBox>
+                <VBox fx:id="vboxCamposProducto" managed="false" visible="false">
+                    <children>
+                        <TextField fx:id="txtCantidad" promptText="Cantidad" />
+                        <TextField fx:id="txtPrecio" promptText="Precio" />
+                        <TextField fx:id="txtNombre" promptText="Nombre del Producto" />
+                    </children>
+                </VBox>
+                <Button onAction="#manejarAgregarProducto" text="Mostrar Campos para Agregar Producto" fx:id="btnAgregarProducto" />
+                <TableView fx:id="tablaProductos">
+                    <columns>
+                        <TableColumn fx:id="colNombre" text="Nombre" />
+                        <TableColumn fx:id="colCantidad" text="Cantidad" />
+                        <TableColumn fx:id="colPrecio" text="Precio" />
+                    </columns>
+                </TableView>
+                <ListView fx:id="listViewProductos" />
+            </VBox>
+        </Tab>
+
+        <!-- Pestaña de Clientes -->
+        <Tab text="Agregar Cliente">
+            <VBox>
+                <VBox fx:id="vboxCamposCliente" managed="false" visible="false">
+                    <children>
+                        <TextField fx:id="txtNombreCliente" promptText="Nombre del Cliente" />
+                        <TextField fx:id="txtTelefonoCliente" promptText="Teléfono" />
+                        <TextField fx:id="txtCorreoCliente" promptText="Correo Electrónico" />
+                    </children>
+                </VBox>
+                <Button onAction="#manejarAgregarCliente" text="Mostrar Campos para Agregar Cliente" fx:id="btnAgregarCliente" />
+                <TableView fx:id="tablaClientes">
+                    <columns>
+                        <TableColumn fx:id="colNombreCliente" text="Nombre" />
+                        <TableColumn fx:id="colTelefonoCliente" text="Teléfono" />
+                        <TableColumn fx:id="colCorreoCliente" text="Correo Electrónico" />
+                    </columns>
+                </TableView>
+                <!-- Aquí podrías agregar una tabla o lista para mostrar los clientes -->
+            </VBox>
+        </Tab>
+    </tabs>
+</TabPane>
